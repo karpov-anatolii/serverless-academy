@@ -1,0 +1,5 @@
+Alex,male,33
+Anna,femail,18
+Den,male,23
+John,male,36
+Lily,femail,16
