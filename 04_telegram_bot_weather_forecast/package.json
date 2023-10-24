@@ -1,5 +1,5 @@
 {
-  "name": "serverless-academy",
+  "name": "04_telegram_bot_weather_forecast",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
