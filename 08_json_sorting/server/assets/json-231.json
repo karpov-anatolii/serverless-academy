@@ -1,0 +1,19 @@
+{
+  "topLevelArray": [
+    {
+      "nestedArray": [true, true, true]
+    },
+    {
+      "nestedObject": {
+        "innerArray": [false, false, false]
+      }
+    }
+  ],
+  "topLevelObject": {
+    "deepArray": [
+      {
+        "isDone": true
+      }
+    ]
+  }
+}

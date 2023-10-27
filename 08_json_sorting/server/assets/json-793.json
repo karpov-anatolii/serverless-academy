@@ -1,0 +1,29 @@
+[
+  [
+    {
+      "nestedArray": [false, true, false],
+      "nestedNumber": 42
+    },
+    {
+      "nestedObject": {
+        "innerArray": [true, false, true],
+        "innerString": "Hello"
+      },
+      "nestedBoolean": true
+    }
+  ],
+  {
+    "innerObject": {
+      "deepArray": [
+        {
+          "deepNumber": 10
+        },
+        {
+          "isDone": false,
+          "deepString": "World"
+        }
+      ]
+    },
+    "topLevelString": "CustomValue"
+  }
+]
