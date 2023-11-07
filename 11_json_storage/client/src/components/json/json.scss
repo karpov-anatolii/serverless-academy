@@ -1,0 +1,13 @@
+.json_container {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  padding: 20px;
+  li {
+    margin: 10px;
+    button {
+      padding: 2px 8px;
+      cursor: pointer;
+    }
+  }
+}
