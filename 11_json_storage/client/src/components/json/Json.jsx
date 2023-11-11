@@ -16,10 +16,10 @@ const Json = () => {
   const clickButtonHandler = async (filename) => {
     try {
       const response = await axios.get(
-        `${API_URL}json/${filename.split('.')[0]}`
+        `${API_URL}demo_bucket/${filename.split('.')[0]}`
       );
-      if (response.data.file) {
-        setJsonContent(JSON.stringify(response.data.file));
+      if (response.data) {
+        setJsonContent(JSON.stringify(response.data));
       }
     } catch (err) {
       alert(err.response.data);

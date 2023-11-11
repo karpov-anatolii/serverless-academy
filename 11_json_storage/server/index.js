@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use('/auth', authRouter);
 app.use('/me', meRouter);
-app.use('/json', jsonRouter);
+app.use('/demo_bucket', jsonRouter);
 
 const start = async () => {
   try {

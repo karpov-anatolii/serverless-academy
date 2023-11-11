@@ -17,8 +17,13 @@ const FileUploadForm = () => {
 
         try {
           const response = await axios.put(
-            `${API_URL}json/${selectedFile.name.split('.')[0]}`,
-            { file: jsonString }
+            `${API_URL}demo_bucket/${selectedFile.name.split('.')[0]}`,
+            JSON.parse(jsonString),
+            {
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            }
           );
           console.log('File uploaded successfully:', response.data);
           dispatch(getAll());

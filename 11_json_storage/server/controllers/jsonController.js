@@ -9,15 +9,16 @@ if (!fs.existsSync(jsonFolderPath)) {
 class JsonController {
   writeFile(req, res) {
     const pathParams = req.params.path;
-    const jsonData = req.body.file;
+
+    const jsonData = JSON.stringify(req.body, null, 2);
+
     const filePath = path.join(jsonFolderPath, `${pathParams}.json`);
 
     fs.writeFile(filePath, jsonData, (err) => {
       if (err) {
         return res.status(500).json({ message: 'Error writing JSON' });
       }
-
-      res.status(200).json({ message: 'JSON has written successfully' });
+      res.status(200).json(JSON.parse(jsonData));
     });
   }
 
@@ -30,7 +31,7 @@ class JsonController {
         return res.status(404).json({ message: 'Error reading JSON' });
       }
       const jsonData = JSON.parse(data);
-      res.status(200).json({ file: jsonData });
+      res.status(200).json(jsonData);
     });
   }
 
